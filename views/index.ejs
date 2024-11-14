@@ -1,0 +1,21 @@
+<%- include('header'); %>
+    <div class="book-list">
+        <h2>Our Books</h2>
+        <div class="books">
+            <% books.forEach(book=> { %>
+                <div class="book-item">
+                    <img src="<%= book.imageUrl %>" alt="<%= book.title %>">
+                    <div>
+                        <h3>
+                            <%= book.title %>
+                        </h3>
+                        <p><strong>Price:</strong>
+                            <%= book.price %>
+                        </p>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+    <%- include('footer'); %>
